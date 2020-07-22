@@ -167,6 +167,11 @@
 #define TEMP_2_PIN                          PF6   // T3 <-> E2
 #define TEMP_BED_PIN                        PF3   // T0 <-> Bed
 
+#if HOTENDS == 1 && TEMP_SENSOR_PROBE
+  #define TEMP_PROBE_PIN              TEMP_2_PIN
+#endif
+
+
 //
 // Heaters / Fans
 //
